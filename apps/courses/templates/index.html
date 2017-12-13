@@ -9,6 +9,17 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hey There</h1>
+    <h1>Add a New Course</h1>
+    <form action ="add_course" method="post">
+        {% csrf_token %}
+        <p>Name: <input type="text" name="name"></p>
+        <p>Description: <input type="text" name="desc"></p>
+        <p><input type="submit" value="Add"></p>
+        
+    </form>
+    <h1>Course</h1>
+    {% for user in all_users %}
+        <p>{{user.name}}</p>
+    {% endfor %}
 </body>
 </html>
