@@ -18,12 +18,20 @@
         
     </form>
     <h1>Course</h1>
-    {% for course in all_courses %}
-        
-        <p>Name: {{course.name}}</p>
-        <p>Description: {{course.desc}}</p>
-        <a href="/delete/{{course.id}}">Delete Course</a>
-    {% endfor %}
+    
+        <table class = "course_box">
+                <th>Name</th>
+                <th>Description</th>
+                <th>Delete</th>
+            {% for course in all_courses %}
+                <tr>
+                    <td>{{course.name}}</td>
+                    <td>{{course.desc}}</td>
+                    <td><a href="/delete/{{course.id}}">Delete Course</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+    
     
 </body>
 </html>

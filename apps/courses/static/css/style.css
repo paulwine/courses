@@ -1,3 +1,18 @@
 h1{
     color: green;
 }
+.course_box{
+    border: 1px solid black;
+    background: radial-gradient(lightblue, peachpuff);
+    padding:15px;
+}
+th{
+    border: 2px solid black;
+    background: radial-gradient(lightblue, peachpuff);
+    padding:5px;
+}
+td{
+    border: .5px solid black;
+    padding:5px;
+
+}
