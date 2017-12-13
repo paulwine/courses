@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Are You Sure?</h1>
+    <p>Are you sure you want to delete {{course_name}}?</p>
+
+    <form action ="/del_process" method = "post">
+        {% csrf_token %}
+        <input type="submit" value="Yes, Delete Course">
+    </form>
+    <form action ="/go_back" method = "post">
+        {% csrf_token %}
+        <input type="submit" value="No, Go Back">
+    </form>
+</body>
+</html>

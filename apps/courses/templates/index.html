@@ -18,8 +18,12 @@
         
     </form>
     <h1>Course</h1>
-    {% for user in all_users %}
-        <p>{{user.name}}</p>
+    {% for course in all_courses %}
+        
+        <p>Name: {{course.name}}</p>
+        <p>Description: {{course.desc}}</p>
+        <a href="/delete/{{course.id}}">Delete Course</a>
     {% endfor %}
+    
 </body>
 </html>
